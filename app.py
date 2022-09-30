@@ -7,8 +7,10 @@ import pandas as pd
 st.set_page_config(layout="wide")
 
 #load and prepare the data.
-csvpath = r'dataBase.csv'
-df = pd.read_csv(csvpath)
+sheet_url = "https://docs.google.com/spreadsheets/d/1xaMnBFk-N6BxVX9kv_t2LMrezkMFizMQIjsJFRGS7SY/edit#gid=1341667998"
+url_1 = sheet_url.replace('/edit#gid=', '/export?format=csv&gid=')
+#csvpath = r'dataBase.csv'
+df = pd.read_csv(url_1)
 df = df[['Latitude','Longitude','City','Desc','Image','Icon']]
 df['Desc'] = df['Desc'].fillna('')
 
@@ -20,7 +22,7 @@ zoom_start=6)
 for index, row in df.iterrows():
         
         text = f"""
-        <h4><b> {row.City} </b></h4><br>  
+        <h4><b> {row.City} </b></h4> 
         <p style="text-align:center;">
         <img src="{row.Image}" alt="Farmer's Market Photo" style = "width:200px;height:200px;"> 
         
