@@ -33,7 +33,7 @@ for index, row in df.iterrows():
             """
         folium.Marker(
             [row['Latitude'],row['Longitude']],
-            icon = folium.features.CustomIcon(row['Icon'],icon_size=(30, 30)),
+            icon = folium.features.CustomIcon(row['Icon'],icon_size=(40, 40)),
             popup = folium.Popup(text, max_width = 260, height= 260),
             tooltip = row['City']).add_to(farmers_markets)
         
