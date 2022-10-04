@@ -38,7 +38,7 @@ for index, row in df.iterrows():
             tooltip = row['City']).add_to(farmers_markets)
         
 
-folium_static(farmers_markets, width=1200, height= 500)
+folium_static(farmers_markets, width=1400, height= 700)
 
 
 ### fonte
