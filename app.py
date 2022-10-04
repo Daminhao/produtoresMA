@@ -14,7 +14,7 @@ df = pd.read_csv(url_1)
 df = df[['Latitude','Longitude','City','Desc','Image','Icon']]
 df['Desc'] = df['Desc'].fillna('')
 
-st.header ("Produtores da baixada")
+st.header ("Produtores do Maranhão")
         
 farmers_markets = folium.Map(location=[-4.803743785485214, -45.16014604033804],
 tiles = 'OpenStreetMap',
@@ -43,19 +43,17 @@ folium_static(farmers_markets, width=1200, height= 500)
 
 ### fonte
 
-photo, info = st.columns([1, 1])
+photo, info = st.columns([0.2, 1])
 
 with photo:
-    st.image('authorimg.png')
+    image = 'imgs/bottons.png'
+    st.image(image, width=200,)
 
 with info:
     st.text("")
     st.text("")
     st.text("")
     st.text("")
-    st.text("")
-    st.text("")
-    st.write('Danilo')
-    st.write('Estudante de eng de Pesca pela UFMA(Universidade Federal do Maranhão)')
-    st.write('Linkedin : [Danilo pereira](https://www.linkedin.com/in/danilo-oliveira-36a6208b/)')
-    st.write('Twitter: https://twitter.com/danilologic')
+    st.write('powered by TECAAP')
+    st.write('Laboratório de Tecnologia Aplicada a Aquicultura e Pesca.')
+    st.write('Instagram : [TECAAP](https://www.instagram.com/lab.tecaap/)')
